@@ -23,7 +23,7 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(10.0),
           child: Container(
             child: SingleChildScrollView(
               child: Column(
