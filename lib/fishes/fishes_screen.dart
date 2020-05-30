@@ -1,6 +1,5 @@
 import 'package:acnh_buddy/fishes/fishes_repo.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FishesScreen extends StatefulWidget {
   @override
@@ -54,12 +53,11 @@ class _FishesScreenState extends State<FishesScreen> {
                       return Card(
                         child: ListTile(
                           onTap: () {},
-                          leading: FaIcon(
-                            FontAwesomeIcons.mapMarker,
-                            size: 10,
-                          ),
                           title: Text(
                               '${snapshot.data[index]['name']['name-USen']}'),
+                          subtitle: Text('Price: ${snapshot
+                              .data[index]['price']} / CJ Price: ${snapshot
+                              .data[index]['price-cj']}'),
                         ),
                       );
                     },

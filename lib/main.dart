@@ -24,7 +24,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: _title,
       home: MyStatefulWidget(),
-      theme: ThemeData(appBarTheme: AppBarTheme()),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: Colors.transparent,
+          elevation: 0,
+          textTheme: TextTheme(
+            headline2: TextStyle(color: Colors.black),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -50,7 +58,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(' Buddy!'),
+        title: Text('AC:NH Buddy!', style: Theme
+            .of(context)
+            .textTheme
+            .headline4,),
       ),
       body: _children[_currentIndex], // new
       bottomNavigationBar: BottomNavigationBar(
