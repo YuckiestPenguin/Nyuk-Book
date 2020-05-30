@@ -24,10 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: _title,
       home: MyStatefulWidget(),
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-        )
-      ),
+      theme: ThemeData(appBarTheme: AppBarTheme()),
     );
   }
 }
@@ -40,24 +37,20 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-
   void onTabTapped(int index) {
     setState(() {
       _currentIndex = index;
     });
   }
+
   int _currentIndex = 0;
-  final List<Widget> _children = [
-FishesScreen(),
-Text('2'),
-Text('3')
-  ];
+  final List<Widget> _children = [FishesScreen(), Text('2'), Text('3')];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ACNH Buddy!'),
+        title: Text(' Buddy!'),
       ),
       body: _children[_currentIndex], // new
       bottomNavigationBar: BottomNavigationBar(
@@ -65,23 +58,17 @@ Text('3')
         onTap: onTabTapped, // new
         currentIndex: _currentIndex, // new
         items: [
-          new BottomNavigationBarItem(
-            icon: FaIcon(
-              FontAwesomeIcons.fish
-            ),
+           BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.fish),
             title: Text('Fishes'),
           ),
-          new BottomNavigationBarItem(
-            icon: FaIcon(
-                FontAwesomeIcons.bug
-            ),
+           BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.bug),
             title: Text('Bugs'),
           ),
-          new BottomNavigationBarItem(
-              icon: FaIcon(
-                  FontAwesomeIcons.skull
-              ),
-              title: Text('Fossils')
+           BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.skull),
+            title: Text('Fossils'),
           )
         ],
       ),
