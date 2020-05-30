@@ -22,6 +22,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: _title,
       home: MyStatefulWidget(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+        )
+      ),
     );
   }
 }
@@ -68,6 +72,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -83,7 +88,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
     );
