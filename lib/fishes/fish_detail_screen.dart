@@ -23,7 +23,7 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Container(
             child: SingleChildScrollView(
               child: Column(
@@ -45,6 +45,56 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                           style: Theme.of(context).textTheme.headline2,
                           textAlign: TextAlign.center,
                         ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          RichText(
+                            text: TextSpan(
+                                style: new TextStyle(
+                                  color: Colors.black,
+                                ),
+                                children: [
+                                  TextSpan(text: 'Northern Season Months: '),
+                                  TextSpan(
+                                      text:
+                                      '${widget
+                                          .fish['availability']['isAllYear']
+                                          ? 'All Year day'
+                                          : widget
+                                          .fish['availability']['month-northern']}')
+                                ]),
+                          ),
+                          RichText(
+                            text: TextSpan(
+                                style: new TextStyle(
+                                  color: Colors.black,
+                                ),
+                                children: [
+                                  TextSpan(text: 'Southern Season Months: '),
+                                  TextSpan(
+                                      text:
+                                      '${widget
+                                          .fish['availability']['isAllYear']
+                                          ? 'All Year day'
+                                          : widget
+                                          .fish['availability']['month-southern']}')
+                                ]),
+                          ),
+                          Text(
+                              'Availability: ${widget
+                                  .fish['availability']['isAllDay']
+                                  ? 'All Day'
+                                  : widget.fish['availability']['time']}'),
+                        ],
                       ),
                     ],
                   )
