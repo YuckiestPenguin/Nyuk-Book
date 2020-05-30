@@ -25,14 +25,18 @@ class MyApp extends StatelessWidget {
       title: _title,
       home: MyStatefulWidget(),
       theme: ThemeData(
+        brightness: Brightness.light,
         appBarTheme: AppBarTheme(
+          iconTheme: IconThemeData(color: Color(0xff121212)),
           color: Colors.transparent,
+          brightness: Brightness.light,
           elevation: 0,
           textTheme: TextTheme(
             headline2: TextStyle(color: Colors.black),
           ),
         ),
       ),
+      themeMode: ThemeMode.light,
     );
   }
 }

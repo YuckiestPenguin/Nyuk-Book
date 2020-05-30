@@ -1,3 +1,4 @@
+import 'package:acnh_buddy/fishes/fish_detail_screen.dart';
 import 'package:acnh_buddy/fishes/fishes_repo.dart';
 import 'package:flutter/material.dart';
 
@@ -8,16 +9,6 @@ class FishesScreen extends StatefulWidget {
 
 class _FishesScreenState extends State<FishesScreen> {
   List fishes;
-
-  @override
-  void initState() {
-    FishesRepo().getAllFishes().then((res) {
-      setState(() {
-        fishes = res;
-      });
-    });
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +43,14 @@ class _FishesScreenState extends State<FishesScreen> {
                     itemBuilder: (ctx, index) {
                       return Card(
                         child: ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>
+                                  FishDetailScreen(
+                                    fish: snapshot.data[index],)),
+                            );
+                          },
                           title: Text(
                               '${snapshot.data[index]['name']['name-USen']}'),
                           subtitle: Text('Price: ${snapshot
