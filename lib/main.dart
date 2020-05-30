@@ -58,15 +58,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         onTap: onTabTapped, // new
         currentIndex: _currentIndex, // new
         items: [
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.fish),
             title: Text('Fishes'),
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.bug),
             title: Text('Bugs'),
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.skull),
             title: Text('Fossils'),
           )
