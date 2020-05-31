@@ -28,13 +28,8 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
-                  ClipOval(
-                    child: Image.network(
-                      'https://acnhapi.com/v1/icons/fish/${widget.fish['id']}',
-//                      height: 75,
-//                      width: 75,
-                      fit: BoxFit.cover,
-                    ),
+                  Image.network(
+                    'https://acnhapi.com/v1/icons/fish/${widget.fish['id']}',
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -54,12 +49,13 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                   Row(
                     children: <Widget>[
                       Flexible(
-                          child: Text(
-                            '\"${widget.fish['catch-phrase']}\"',
-                            style: TextStyle(
-                                fontStyle: FontStyle.italic,
-                                fontWeight: FontWeight.bold),
-                          ))
+                        child: Text(
+                          '\"${widget.fish['catch-phrase']}\"',
+                          style: TextStyle(
+                              fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      )
                     ],
                   ),
                   SizedBox(
@@ -85,9 +81,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 ),
                                 children: [
                                   TextSpan(
-                                      text: 'Location: ',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
+                                    text: 'Location: ',
+                                    style:
+                                    TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                   TextSpan(
                                       text:
                                       '${widget
@@ -101,9 +98,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 ),
                                 children: [
                                   TextSpan(
-                                      text: 'Rarity: ',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
+                                    text: 'Rarity: ',
+                                    style:
+                                    TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                   TextSpan(
                                       text:
                                       '${widget
@@ -117,9 +115,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 ),
                                 children: [
                                   TextSpan(
-                                      text: 'Northern Season Months: ',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
+                                    text: 'Northern Season Months: ',
+                                    style:
+                                    TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                   TextSpan(
                                       text:
                                       '${widget
@@ -136,9 +135,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 ),
                                 children: [
                                   TextSpan(
-                                      text: 'Southern Season Months: ',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
+                                    text: 'Southern Season Months: ',
+                                    style:
+                                    TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                   TextSpan(
                                       text:
                                       '${widget
@@ -155,9 +155,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 ),
                                 children: [
                                   TextSpan(
-                                      text: 'Time of Day: ',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
+                                    text: 'Time of Day: ',
+                                    style:
+                                    TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                   TextSpan(
                                       text:
                                       '${widget.fish['availability']['isAllDay']
@@ -191,9 +192,11 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                   color: Colors.black,
                                 ),
                                 children: [
-                                  TextSpan(text: 'Price: ',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
+                                  TextSpan(
+                                    text: 'Price: ',
+                                    style:
+                                    TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                   TextSpan(text: '${widget.fish['price']}')
                                 ]),
                           ),
@@ -203,9 +206,11 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                   color: Colors.black,
                                 ),
                                 children: [
-                                  TextSpan(text: 'CJ Price: ',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold)),
+                                  TextSpan(
+                                    text: 'CJ Price: ',
+                                    style:
+                                    TextStyle(fontWeight: FontWeight.bold),
+                                  ),
                                   TextSpan(text: '${widget.fish['price-cj']}')
                                 ]),
                           ),
