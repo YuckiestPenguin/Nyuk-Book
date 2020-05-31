@@ -51,7 +51,6 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                   SizedBox(
                     height: 50,
                   ),
-//                  Availability
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
