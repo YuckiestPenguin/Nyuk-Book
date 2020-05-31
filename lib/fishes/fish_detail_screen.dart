@@ -51,12 +51,46 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                   SizedBox(
                     height: 50,
                   ),
+//                  Availability
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
+                          Text(
+                            'Availability',
+                            style: Theme
+                                .of(context)
+                                .textTheme
+                                .headline5,
+                          ),
+                          RichText(
+                            text: TextSpan(
+                                style: new TextStyle(
+                                  color: Colors.black,
+                                ),
+                                children: [
+                                  TextSpan(text: 'Location: '),
+                                  TextSpan(
+                                      text:
+                                      '${widget
+                                          .fish['availability']['location']}')
+                                ]),
+                          ),
+                          RichText(
+                            text: TextSpan(
+                                style: new TextStyle(
+                                  color: Colors.black,
+                                ),
+                                children: [
+                                  TextSpan(text: 'Rarity: '),
+                                  TextSpan(
+                                      text:
+                                      '${widget
+                                          .fish['availability']['rarity']}')
+                                ]),
+                          ),
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
@@ -89,11 +123,21 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                           .fish['availability']['month-southern']}')
                                 ]),
                           ),
-                          Text(
-                              'Availability: ${widget
-                                  .fish['availability']['isAllDay']
-                                  ? 'All Day'
-                                  : widget.fish['availability']['time']}'),
+                          RichText(
+                            text: TextSpan(
+                                style: new TextStyle(
+                                  color: Colors.black,
+                                ),
+                                children: [
+                                  TextSpan(text: 'Time of Day: '),
+                                  TextSpan(
+                                      text:
+                                      '${widget.fish['availability']['isAllDay']
+                                          ? 'All Day'
+                                          : widget
+                                          .fish['availability']['time']}')
+                                ]),
+                          ),
                         ],
                       ),
                     ],
