@@ -31,8 +31,8 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                   ClipOval(
                     child: Image.network(
                       'https://acnhapi.com/v1/icons/fish/${widget.fish['id']}',
-                      height: 75,
-                      width: 75,
+//                      height: 75,
+//                      width: 75,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -52,6 +52,20 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                     height: 50,
                   ),
                   Row(
+                    children: <Widget>[
+                      Flexible(
+                          child: Text(
+                            '\"${widget.fish['catch-phrase']}\"',
+                            style: TextStyle(
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold),
+                          ))
+                    ],
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Column(
@@ -62,7 +76,7 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                             style: Theme
                                 .of(context)
                                 .textTheme
-                                .headline5,
+                                .headline4,
                           ),
                           RichText(
                             text: TextSpan(
@@ -70,7 +84,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                   color: Colors.black,
                                 ),
                                 children: [
-                                  TextSpan(text: 'Location: '),
+                                  TextSpan(
+                                      text: 'Location: ',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
                                   TextSpan(
                                       text:
                                       '${widget
@@ -83,7 +100,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                   color: Colors.black,
                                 ),
                                 children: [
-                                  TextSpan(text: 'Rarity: '),
+                                  TextSpan(
+                                      text: 'Rarity: ',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
                                   TextSpan(
                                       text:
                                       '${widget
@@ -96,7 +116,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                   color: Colors.black,
                                 ),
                                 children: [
-                                  TextSpan(text: 'Northern Season Months: '),
+                                  TextSpan(
+                                      text: 'Northern Season Months: ',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
                                   TextSpan(
                                       text:
                                       '${widget
@@ -112,7 +135,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                   color: Colors.black,
                                 ),
                                 children: [
-                                  TextSpan(text: 'Southern Season Months: '),
+                                  TextSpan(
+                                      text: 'Southern Season Months: ',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
                                   TextSpan(
                                       text:
                                       '${widget
@@ -128,7 +154,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                   color: Colors.black,
                                 ),
                                 children: [
-                                  TextSpan(text: 'Time of Day: '),
+                                  TextSpan(
+                                      text: 'Time of Day: ',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
                                   TextSpan(
                                       text:
                                       '${widget.fish['availability']['isAllDay']
@@ -140,7 +169,75 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                         ],
                       ),
                     ],
-                  )
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Pricing',
+                            style: Theme
+                                .of(context)
+                                .textTheme
+                                .headline4,
+                          ),
+                          RichText(
+                            text: TextSpan(
+                                style: new TextStyle(
+                                  color: Colors.black,
+                                ),
+                                children: [
+                                  TextSpan(text: 'Price: ',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  TextSpan(text: '${widget.fish['price']}')
+                                ]),
+                          ),
+                          RichText(
+                            text: TextSpan(
+                                style: new TextStyle(
+                                  color: Colors.black,
+                                ),
+                                children: [
+                                  TextSpan(text: 'CJ Price: ',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  TextSpan(text: '${widget.fish['price-cj']}')
+                                ]),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Image.network(
+                          'https://acnhapi.com/v1/images/fish/${widget
+                              .fish['id']}',
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Flexible(
+                          child: Text(
+                            '\"${widget.fish['museum-phrase']}\"',
+                            style: TextStyle(fontStyle: FontStyle.italic),
+                          ))
+                    ],
+                  ),
                 ],
               ),
             ),
