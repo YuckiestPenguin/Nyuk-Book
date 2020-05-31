@@ -222,6 +222,36 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                     height: 50,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        size: 10,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        size: 20,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        size: 30,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        size: 40,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        size: 50,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        size: 60,
+                      )
+                    ],
+                  ),
+
+                  Row(
                     children: <Widget>[
                       Expanded(
                         child: Image.network(
@@ -230,9 +260,6 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                         ),
                       ),
                     ],
-                  ),
-                  SizedBox(
-                    height: 20,
                   ),
                   Row(
                     children: <Widget>[
