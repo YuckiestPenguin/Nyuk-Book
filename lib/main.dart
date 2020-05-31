@@ -17,14 +17,13 @@ void main() => runApp(MyApp());
 
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
-  static const String _title = 'Flutter Code Sample';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: _title,
       home: MyStatefulWidget(),
       theme: ThemeData(
+        primaryColor: Color(0xff235789),
         brightness: Brightness.light,
         appBarTheme: AppBarTheme(
           iconTheme: IconThemeData(color: Color(0xff121212)),
@@ -56,7 +55,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 
   int _currentIndex = 0;
-  final List<Widget> _children = [FishesScreen(), Text('2'), Text('3')];
+  final List<Widget> _children = [
+    FishesScreen(),
+    Text('2'),
+    Text('3'),
+    Text('sd')
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -69,6 +73,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       ),
       body: _children[_currentIndex], // new
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Theme
+            .of(context)
+            .primaryColor,
+        unselectedItemColor: Colors.grey,
         elevation: 0,
         onTap: onTabTapped, // new
         currentIndex: _currentIndex, // new
@@ -78,13 +86,17 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             title: Text('Fishes'),
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.bug),
+            icon: FaIcon(FontAwesomeIcons.spider),
             title: Text('Bugs'),
           ),
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.skull),
             title: Text('Fossils'),
-          )
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.userAstronaut),
+            title: Text('Villagers'),
+          ),
         ],
       ),
     );

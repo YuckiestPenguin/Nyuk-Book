@@ -1,6 +1,7 @@
 import 'package:acnh_buddy/fishes/fish_detail_screen.dart';
 import 'package:acnh_buddy/fishes/fishes_repo.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class FishesScreen extends StatefulWidget {
   @override
@@ -23,7 +24,14 @@ class _FishesScreenState extends State<FishesScreen> {
               return Container();
             }
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Text('loading');
+              return Center(
+                child: SpinKitRipple(
+//                  size: 100,
+                  color: Theme
+                      .of(context)
+                      .primaryColor,
+                ),
+              );
             }
 
             if (snapshot.connectionState == ConnectionState.done &&
