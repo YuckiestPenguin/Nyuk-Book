@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class VillagersRepo {
   Future getAllVillagers() async {
-    final url = '${GlobalEndpoints().baseUrl}fish';
+    final url = '${GlobalEndpoints().baseUrl}villagers';
 
     try {
       var response = await http.get(url);
