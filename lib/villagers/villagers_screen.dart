@@ -73,7 +73,10 @@ class _VillagersScreenState extends State<VillagersScreen> {
                                 style: Theme.of(context).textTheme.headline6,
                               ),
                               subtitle: Text(
-                                  'Price: ${snapshot.data[index]['price']}'),
+                                  '${snapshot
+                                      .data[index]['personality']} ${snapshot
+                                      .data[index]['gender']} ${snapshot
+                                      .data[index]['species']}'),
                             ),
                           ),
                         ],
