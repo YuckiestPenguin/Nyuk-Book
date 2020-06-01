@@ -39,7 +39,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                           '${widget.fish['name']['name-USen']
                               .toString()
                               .toUpperCase()}',
-                          style: Theme.of(context).textTheme.headline2,
+                          style: Theme
+                              .of(context)
+                              .textTheme
+                              .headline3,
                           textAlign: TextAlign.center,
                         ),
                       ),
