@@ -57,8 +57,7 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                         child: Text(
                           '\"${widget.fish['catch-phrase']}\"',
                           style: TextStyle(
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold),
+                            fontStyle: FontStyle.italic,),
                         ),
                       )
                     ],
@@ -79,6 +78,7 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 .textTheme
                                 .headline4,
                           ),
+                          SizedBox(height: 20,),
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
@@ -87,8 +87,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 children: [
                                   TextSpan(
                                     text: 'Location: ',
-                                    style:
-                                    TextStyle(fontWeight: FontWeight.bold),
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headline6,
                                   ),
                                   TextSpan(
                                       text:
@@ -191,6 +193,7 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 .textTheme
                                 .headline4,
                           ),
+                          SizedBox(height: 20,),
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
@@ -324,7 +327,10 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                       Flexible(
                           child: Text(
                             '\"${widget.fish['museum-phrase']}\"',
-                            style: TextStyle(fontStyle: FontStyle.italic),
+                            style: Theme
+                                .of(context)
+                                .textTheme
+                                .bodyText1,
                           ))
                     ],
                   ),

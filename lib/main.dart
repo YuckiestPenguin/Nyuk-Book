@@ -12,6 +12,7 @@
 import 'package:acnh_buddy/fishes/fishes_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,6 +24,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: MyStatefulWidget(),
       theme: ThemeData(
+        textTheme: GoogleFonts.chauPhilomeneOneTextTheme(
+          Theme
+              .of(context)
+              .textTheme,
+        ),
         primaryColor: Color(0xff235789),
         brightness: Brightness.light,
         appBarTheme: AppBarTheme(
