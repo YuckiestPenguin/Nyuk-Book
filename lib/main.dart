@@ -11,6 +11,7 @@
 
 import 'package:acnh_buddy/bugs/bugs_screen.dart';
 import 'package:acnh_buddy/fishes/fishes_screen.dart';
+import 'package:acnh_buddy/fossils/fossils_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -65,7 +66,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   final List<Widget> _children = [
     FishesScreen(),
     BugsScreen(),
-    Text('3'),
+    FossilsScreen(),
     Text('sd')
   ];
 
