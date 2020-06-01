@@ -36,7 +36,9 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                     children: <Widget>[
                       Flexible(
                         child: Text(
-                          '${widget.fish['name']['name-USen']}',
+                          '${widget.fish['name']['name-USen']
+                              .toString()
+                              .toUpperCase()}',
                           style: Theme.of(context).textTheme.headline2,
                           textAlign: TextAlign.center,
                         ),
@@ -224,33 +226,86 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      FaIcon(
+                      widget.fish['shadow'].toString().contains('1')
+                          ? FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        color: Theme
+                            .of(context)
+                            .primaryColor,
+                        size: 10,
+                      )
+                          : FaIcon(
                         FontAwesomeIcons.mapMarker,
                         size: 10,
+                        color: Colors.grey,
                       ),
-                      FaIcon(
+                      widget.fish['shadow'].toString().contains('2')
+                          ? FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        color: Theme
+                            .of(context)
+                            .primaryColor,
+                        size: 20,
+                      )
+                          : FaIcon(
                         FontAwesomeIcons.mapMarker,
                         size: 20,
+                        color: Colors.grey,
                       ),
-                      FaIcon(
+                      widget.fish['shadow'].toString().contains('3')
+                          ? FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        color: Theme
+                            .of(context)
+                            .primaryColor,
+                        size: 30,
+                      )
+                          : FaIcon(
                         FontAwesomeIcons.mapMarker,
                         size: 30,
+                        color: Colors.grey,
                       ),
-                      FaIcon(
+                      widget.fish['shadow'].toString().contains('4')
+                          ? FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        color: Theme
+                            .of(context)
+                            .primaryColor,
+                        size: 40,
+                      )
+                          : FaIcon(
                         FontAwesomeIcons.mapMarker,
                         size: 40,
+                        color: Colors.grey,
                       ),
-                      FaIcon(
+                      widget.fish['shadow'].toString().contains('5')
+                          ? FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        color: Theme
+                            .of(context)
+                            .primaryColor,
+                        size: 50,
+                      )
+                          : FaIcon(
                         FontAwesomeIcons.mapMarker,
                         size: 50,
+                        color: Colors.grey,
                       ),
-                      FaIcon(
+                      widget.fish['shadow'].toString().contains('6')
+                          ? FaIcon(
                         FontAwesomeIcons.mapMarker,
+                        color: Theme
+                            .of(context)
+                            .primaryColor,
                         size: 60,
                       )
+                          : FaIcon(
+                        FontAwesomeIcons.mapMarker,
+                        size: 60,
+                        color: Colors.grey,
+                      ),
                     ],
                   ),
-
                   Row(
                     children: <Widget>[
                       Expanded(

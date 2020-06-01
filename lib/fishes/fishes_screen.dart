@@ -1,5 +1,6 @@
 import 'package:acnh_buddy/fishes/fish_detail_screen.dart';
 import 'package:acnh_buddy/fishes/fishes_repo.dart';
+import 'package:acnh_buddy/global/route_animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -26,7 +27,7 @@ class _FishesScreenState extends State<FishesScreen> {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(
                 child: SpinKitRipple(
-//                  size: 100,
+                  size: 75,
                   color: Theme
                       .of(context)
                       .primaryColor,
@@ -49,22 +50,38 @@ class _FishesScreenState extends State<FishesScreen> {
                     padding: EdgeInsets.fromLTRB(0, 0, 0, 55),
                     itemCount: snapshot.data.length,
                     itemBuilder: (ctx, index) {
-                      return Card(
-                        child: ListTile(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) =>
-                                  FishDetailScreen(
-                                    fish: snapshot.data[index],)),
-                            );
-                          },
-                          title: Text(
-                              '${snapshot.data[index]['name']['name-USen']}'),
-                          subtitle: Text('Price: ${snapshot
-                              .data[index]['price']} / CJ Price: ${snapshot
-                              .data[index]['price-cj']}'),
-                        ),
+                      return Column(
+                        children: <Widget>[
+                          Card(
+                            child: ListTile(
+                              leading: Image.network(
+                                'https://acnhapi.com/v1/icons/fish/${snapshot
+                                    .data[index]['id']}',
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  ScaleRoute(
+                                    page: FishDetailScreen(
+                                      fish: snapshot.data[index],
+                                    ),
+                                  ),
+                                );
+                              },
+                              title: Text(
+                                '${snapshot.data[index]['name']['name-USen']
+                                    .toString()
+                                    .toUpperCase()}',
+                                style: Theme
+                                    .of(context)
+                                    .textTheme
+                                    .headline6,
+                              ),
+                              subtitle: Text(
+                                  'Price: ${snapshot.data[index]['price']}'),
+                            ),
+                          ),
+                        ],
                       );
                     },
                   ),
