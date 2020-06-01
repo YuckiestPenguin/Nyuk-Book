@@ -1,4 +1,4 @@
-import 'package:acnh_buddy/fishes/fish_detail_screen.dart';
+import 'package:acnh_buddy/fossils/fossil_detail_screen.dart';
 import 'package:acnh_buddy/fossils/fossils_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -62,8 +62,9 @@ class _FossilsScreenState extends State<FossilsScreen> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => FishDetailScreen(
-                                            fish: snapshot.data[index],
+                                      builder: (context) =>
+                                          FossilDetailScreen(
+                                            fossil: snapshot.data[index],
                                           )),
                                 );
                               },
