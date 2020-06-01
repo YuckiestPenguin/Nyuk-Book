@@ -9,6 +9,7 @@
 // ![A scaffold with a bottom navigation bar containing three bottom navigation
 // bar items. The first one is selected.](https://flutter.github.io/assets-for-api-docs/assets/material/bottom_navigation_bar.png)
 
+import 'package:acnh_buddy/bugs/bugs_screen.dart';
 import 'package:acnh_buddy/fishes/fishes_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -63,7 +64,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     FishesScreen(),
-    Text('2'),
+    BugsScreen(),
     Text('3'),
     Text('sd')
   ];
