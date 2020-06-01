@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "171360307320",
+    "firebase_url": "https://nyukbook.firebaseio.com",
+    "project_id": "nyukbook",
+    "storage_bucket": "nyukbook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171360307320:android:bcd4cffe2569ece788c58d",
+        "android_client_info": {
+          "package_name": "io.penguinventure.nyukbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171360307320-813rc86l1strqhaf7c20ie7nn7u1gpci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7XLfPFexFR0Kqih89V133G78Y9b3HyS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171360307320-813rc86l1strqhaf7c20ie7nn7u1gpci.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "171360307320-52on2gd5oqq31hl0l3g22pp6knrpg2sn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.penguinventure.nyukbook"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
