@@ -1,4 +1,4 @@
-import 'package:acnh_buddy/bugs/bug_detail_screen.dart';
+import 'package:acnh_buddy/villagers/villager_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -63,8 +63,9 @@ class _VillagersScreenState extends State<VillagersScreen> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => BugDetailScreen(
-                                            bug: snapshot.data[index],
+                                      builder: (context) =>
+                                          VillagerDetailScreen(
+                                            villager: snapshot.data[index],
                                           )),
                                 );
                               },
