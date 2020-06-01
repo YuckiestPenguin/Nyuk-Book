@@ -78,8 +78,7 @@ class _VillagersScreenState extends State<VillagersScreen> {
                                 .headline6,
                           ),
                           subtitle: Text(
-                              '${snapshot
-                                  .data[index]['personality']} ${snapshot
+                              '${snapshot.data[index]['personality']} ${snapshot
                                   .data[index]['gender']} ${snapshot
                                   .data[index]['species']}'),
                         ),
