@@ -1,6 +1,5 @@
 import 'package:acnh_buddy/fishes/fish_detail_screen.dart';
 import 'package:acnh_buddy/fishes/fishes_repo.dart';
-import 'package:acnh_buddy/global/route_animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -53,6 +52,10 @@ class _FishesScreenState extends State<FishesScreen> {
                       return Column(
                         children: <Widget>[
                           Card(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            elevation: 5,
                             child: ListTile(
                               leading: Image.network(
                                 'https://acnhapi.com/v1/icons/fish/${snapshot
@@ -61,11 +64,9 @@ class _FishesScreenState extends State<FishesScreen> {
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  ScaleRoute(
-                                    page: FishDetailScreen(
-                                      fish: snapshot.data[index],
-                                    ),
-                                  ),
+                                  MaterialPageRoute(builder: (context) =>
+                                      FishDetailScreen(
+                                        fish: snapshot.data[index],)),
                                 );
                               },
                               title: Text(
