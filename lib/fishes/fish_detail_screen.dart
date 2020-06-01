@@ -52,12 +52,14 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                     height: 50,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Flexible(
+                      Expanded(
                         child: Text(
                           '\"${widget.fish['catch-phrase']}\"',
+                          textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontStyle: FontStyle.italic,),
+                              fontStyle: FontStyle.italic, fontSize: 16),
                         ),
                       )
                     ],
