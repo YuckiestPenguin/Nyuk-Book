@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="acnh_buddy"
+        android:label="NyukBook!"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
