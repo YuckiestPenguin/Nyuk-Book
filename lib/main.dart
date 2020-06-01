@@ -66,6 +66,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('AC:NH Buddy!', style: Theme
             .of(context)
             .textTheme
