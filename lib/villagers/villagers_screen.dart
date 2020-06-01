@@ -48,39 +48,41 @@ class _VillagersScreenState extends State<VillagersScreen> {
                     padding: EdgeInsets.fromLTRB(0, 0, 0, 55),
                     itemCount: snapshot.data.length,
                     itemBuilder: (ctx, index) {
-                      return Column(
-                        children: <Widget>[
-                          Card(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            elevation: 5,
-                            child: ListTile(
-                              leading: Image.network(
-                                'https://acnhapi.com/v1/icons/villagers/${snapshot.data[index]['id']}',
-                              ),
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          VillagerDetailScreen(
-                                            villager: snapshot.data[index],
-                                          )),
-                                );
-                              },
-                              title: Text(
-                                '${snapshot.data[index]['name']['name-USen'].toString().toUpperCase()}',
-                                style: Theme.of(context).textTheme.headline6,
-                              ),
-                              subtitle: Text(
-                                  '${snapshot
-                                      .data[index]['personality']} ${snapshot
-                                      .data[index]['gender']} ${snapshot
-                                      .data[index]['species']}'),
-                            ),
+                      return Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        elevation: 5,
+                        child: ListTile(
+                          leading: Image.network(
+                            'https://acnhapi.com/v1/icons/villagers/${snapshot
+                                .data[index]['id']}',
                           ),
-                        ],
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      VillagerDetailScreen(
+                                        villager: snapshot.data[index],
+                                      )),
+                            );
+                          },
+                          title: Text(
+                            '${snapshot.data[index]['name']['name-USen']
+                                .toString()
+                                .toUpperCase()}',
+                            style: Theme
+                                .of(context)
+                                .textTheme
+                                .headline6,
+                          ),
+                          subtitle: Text(
+                              '${snapshot
+                                  .data[index]['personality']} ${snapshot
+                                  .data[index]['gender']} ${snapshot
+                                  .data[index]['species']}'),
+                        ),
                       );
                     },
                   ),
