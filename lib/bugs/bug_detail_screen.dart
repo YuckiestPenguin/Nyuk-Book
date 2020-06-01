@@ -29,7 +29,7 @@ class _BugDetailScreenState extends State<BugDetailScreen> {
               child: Column(
                 children: <Widget>[
                   Image.network(
-                    'https://acnhapi.com/v1/icons/bug/${widget.bug['id']}',
+                    'https://acnhapi.com/v1/icons/bugs/${widget.bug['id']}',
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -188,96 +188,23 @@ class _BugDetailScreenState extends State<BugDetailScreen> {
                                     color: Colors.black, height: 1.5),
                                 children: [
                                   TextSpan(
-                                    text: 'CJ Price: ',
+                                    text: 'Flick Price: ',
                                     style:
                                         Theme.of(context).textTheme.headline6,
                                   ),
-                                  TextSpan(text: '${widget.bug['price-cj']}')
+                                  TextSpan(text: '${widget.bug['price-flick']}')
                                 ]),
                           ),
                         ],
                       )
                     ],
                   ),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      widget.bug['shadow'].toString().contains('1')
-                          ? FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              color: Theme.of(context).primaryColor,
-                              size: 10,
-                            )
-                          : FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              size: 10,
-                              color: Colors.grey,
-                            ),
-                      widget.bug['shadow'].toString().contains('2')
-                          ? FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              color: Theme.of(context).primaryColor,
-                              size: 20,
-                            )
-                          : FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              size: 20,
-                              color: Colors.grey,
-                            ),
-                      widget.bug['shadow'].toString().contains('3')
-                          ? FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              color: Theme.of(context).primaryColor,
-                              size: 30,
-                            )
-                          : FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              size: 30,
-                              color: Colors.grey,
-                            ),
-                      widget.bug['shadow'].toString().contains('4')
-                          ? FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              color: Theme.of(context).primaryColor,
-                              size: 40,
-                            )
-                          : FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              size: 40,
-                              color: Colors.grey,
-                            ),
-                      widget.bug['shadow'].toString().contains('5')
-                          ? FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              color: Theme.of(context).primaryColor,
-                              size: 50,
-                            )
-                          : FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              size: 50,
-                              color: Colors.grey,
-                            ),
-                      widget.bug['shadow'].toString().contains('6')
-                          ? FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              color: Theme.of(context).primaryColor,
-                              size: 60,
-                            )
-                          : FaIcon(
-                              FontAwesomeIcons.mapMarker,
-                              size: 60,
-                              color: Colors.grey,
-                            ),
-                    ],
-                  ),
                   Row(
                     children: <Widget>[
                       Expanded(
                         child: Image.network(
-                          'https://acnhapi.com/v1/images/bug/${widget.bug['id']}',
+                          'https://acnhapi.com/v1/images/bugs/${widget
+                              .bug['id']}',
                         ),
                       ),
                     ],
