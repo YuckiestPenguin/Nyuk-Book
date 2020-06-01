@@ -43,5 +43,8 @@
 	<false/>
 	<key>CFBundleName</key>
     <string>NyukBook!</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
+
 </dict>
 </plist>
