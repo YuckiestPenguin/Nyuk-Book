@@ -76,7 +76,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Nyuk Book', style: Theme
+        title: Text('Nyuk Book!', style: Theme
             .of(context)
             .textTheme
             .headline4,),
