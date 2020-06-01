@@ -78,11 +78,11 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 .textTheme
                                 .headline4,
                           ),
-                          SizedBox(height: 20,),
+                          SizedBox(height: 1.50,),
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
-                                  color: Colors.black,
+                                    color: Colors.black, height: 1.5
                                 ),
                                 children: [
                                   TextSpan(
@@ -101,13 +101,16 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
-                                  color: Colors.black,
+                                    color: Colors.black, height: 1.5
                                 ),
                                 children: [
                                   TextSpan(
                                     text: 'Rarity: ',
                                     style:
-                                    TextStyle(fontWeight: FontWeight.bold),
+                                    Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headline6,
                                   ),
                                   TextSpan(
                                       text:
@@ -118,13 +121,15 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
-                                  color: Colors.black,
+                                    color: Colors.black, height: 1.5
                                 ),
                                 children: [
                                   TextSpan(
                                     text: 'Northern Season Months: ',
-                                    style:
-                                    TextStyle(fontWeight: FontWeight.bold),
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headline6,
                                   ),
                                   TextSpan(
                                       text:
@@ -138,13 +143,15 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
-                                  color: Colors.black,
+                                    color: Colors.black, height: 1.5
                                 ),
                                 children: [
                                   TextSpan(
                                     text: 'Southern Season Months: ',
-                                    style:
-                                    TextStyle(fontWeight: FontWeight.bold),
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headline6,
                                   ),
                                   TextSpan(
                                       text:
@@ -158,13 +165,15 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
-                                  color: Colors.black,
+                                    color: Colors.black, height: 1.5
                                 ),
                                 children: [
                                   TextSpan(
                                     text: 'Time of Day: ',
-                                    style:
-                                    TextStyle(fontWeight: FontWeight.bold),
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headline6,
                                   ),
                                   TextSpan(
                                       text:
@@ -193,17 +202,19 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                                 .textTheme
                                 .headline4,
                           ),
-                          SizedBox(height: 20,),
+                          SizedBox(height: 1.50,),
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
-                                  color: Colors.black,
+                                    color: Colors.black, height: 1.5
                                 ),
                                 children: [
                                   TextSpan(
                                     text: 'Price: ',
-                                    style:
-                                    TextStyle(fontWeight: FontWeight.bold),
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headline6,
                                   ),
                                   TextSpan(text: '${widget.fish['price']}')
                                 ]),
@@ -211,13 +222,15 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                           RichText(
                             text: TextSpan(
                                 style: new TextStyle(
-                                  color: Colors.black,
+                                    color: Colors.black, height: 1.5
                                 ),
                                 children: [
                                   TextSpan(
                                     text: 'CJ Price: ',
-                                    style:
-                                    TextStyle(fontWeight: FontWeight.bold),
+                                    style: Theme
+                                        .of(context)
+                                        .textTheme
+                                        .headline6,
                                   ),
                                   TextSpan(text: '${widget.fish['price-cj']}')
                                 ]),
@@ -330,7 +343,7 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                             style: Theme
                                 .of(context)
                                 .textTheme
-                                .bodyText1,
+                                .subtitle1,
                           ))
                     ],
                   ),
