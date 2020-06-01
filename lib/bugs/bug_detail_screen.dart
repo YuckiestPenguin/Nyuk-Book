@@ -203,8 +203,7 @@ class _BugDetailScreenState extends State<BugDetailScreen> {
                     children: <Widget>[
                       Expanded(
                         child: Image.network(
-                          'https://acnhapi.com/v1/images/bugs/${widget
-                              .bug['id']}',
+                          '${widget.bug['image_uri']}',
                         ),
                       ),
                     ],

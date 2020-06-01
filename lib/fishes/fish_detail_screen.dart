@@ -331,8 +331,8 @@ class _FishDetailScreenState extends State<FishDetailScreen> {
                     children: <Widget>[
                       Expanded(
                         child: Image.network(
-                          'https://acnhapi.com/v1/images/fish/${widget
-                              .fish['id']}',
+                          '${widget
+                              .fish['image_uri']}',
                         ),
                       ),
                     ],
