@@ -1,4 +1,4 @@
-# acnh_buddy
+# acnh_buddy (NyukBook!)
 
 A new Flutter project.
 
@@ -14,6 +14,16 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+### Screenshots
+
+
+<img width="478" alt="image" src="https://user-images.githubusercontent.com/12818897/91777525-12cd9d00-ebbe-11ea-8567-9ae425b0f2d2.png">
+
+<img width="479" alt="image" src="https://user-images.githubusercontent.com/12818897/91777562-30026b80-ebbe-11ea-9565-0bfa69952452.png">
+
+<img width="476" alt="image" src="https://user-images.githubusercontent.com/12818897/91777581-3a246a00-ebbe-11ea-9497-c6af57ba85c6.png">
+
 
 # Privacy Policy
 
